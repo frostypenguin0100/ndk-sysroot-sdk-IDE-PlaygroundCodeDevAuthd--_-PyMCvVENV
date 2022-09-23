@@ -196,9 +196,9 @@ Copyright (c) .NET Foundation. All rights reserved.
       ProjectPath="$(MSBuildProjectFullPath)"
       ProjectAssetsFile="$(ProjectAssetsFile)"
       ProjectLanguage="$(Language)"
-      EmitLegacyAssetsFileItems="$(EmitLegacyAssetsFileItems)"
       TargetFramework="$(TargetFramework)"
-      ContinueOnError="ErrorAndContinue">
+      ContinueOnError="ErrorAndContinue"
+      Condition="'$(EmitLegacyAssetsFileItems)' == 'true'">
 
       <Output TaskParameter="PackageDefinitions" ItemName="PackageDefinitions" />
       <Output TaskParameter="PackageDependencies" ItemName="PackageDependencies" />
